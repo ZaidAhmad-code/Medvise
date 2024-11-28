@@ -1,0 +1,198 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #b8a9ce, #e3cfff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Header Section */
+.page-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #360052;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #4a0072;
+    margin-left: 140px;
+    margin-top: -50px;
+}
+
+/* Chatbot Container */
+.chat-container {
+    width: 600px;
+    height: 520px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Chatbox Area */
+.chatbox {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#chat-messages div {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.User {
+    text-align: right;
+    background-color: #d9a8ff;
+    color: #4a0072;
+}
+
+.Chatbot {
+    text-align: left;
+    background-color: #a68dff;
+    color: #4a0072;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #4a0072;
+}
+
+input[type="text"]::placeholder {
+    color: #4a0072;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4a0072;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #8e44ad;
+}
+@media (max-width: 768px) {
+    .logo-title {
+        flex-direction: column; /* Stack logo and title vertically */
+        align-items: center;
+    }
+
+    .logo {
+        margin-top: -20px;
+        width: 90px; /* Reduce logo size for smaller screens */
+    }
+
+    .title {
+        margin-top: -20px;
+        font-size: 35px; /* Adjust title size */
+    }
+
+    .subtitle {
+        font-size: 7px; /* Smaller subtitle */
+        margin-top: 0px;
+        margin-left: -25px;
+    }
+
+    .chat-container {
+        height: 450px;
+        width: 100%; /* Adjust chat container height */
+    }
+
+    input[type="text"] {
+        font-size: 14px; /* Smaller font for input */
+        padding: 8px; /* Adjust padding */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 40px; /* Further reduce logo size for very small screens */
+    }
+
+    .title {
+        font-size: 24px; /* Smaller title */
+    }
+
+    .chat-container {
+        width: 70%; /* Make chat container fit within smaller screens */
+        height: 400px;
+    }
+
+    input[type="text"] {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
